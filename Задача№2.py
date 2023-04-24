@@ -1,15 +1,21 @@
-import numpy as np
-str1= np.random.randint(0,9,10)
-print(str1)
-x=0
-a=0
-sum=int(0)
-for i in range(3):
-    for j in range(len(str1)):
-        if x < str1[j]:
-            x=str1[j]
-            a=j
-    sum+=str1[a]
-    str1[a]=0
-    x=0
-print(sum)          
+def num (a,sum):
+    if a -1!=0:   
+        sum = sum * a
+        a -= 1  
+    else:
+        print(sum)
+        return 
+    num (a,sum)
+def num1 (a,sum):
+    if a !=0:   
+        sum = sum + a
+        a -= 1
+    else:
+        print(sum) 
+        return 
+    num1 (a,sum)
+
+a=int(input())
+sum = int(1)
+num (a,sum)
+num1 (a,(sum-1))
